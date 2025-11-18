@@ -1,6 +1,6 @@
 import { ref } from "vue";
 
-function useHttp<T>() {
+export function useHttp<T>() {
     const data = ref<T | null>(null)
     const status = ref<number | null>(null)
     const isError = ref<boolean>(false)
@@ -42,6 +42,7 @@ function useHttp<T>() {
         status,
         isLoading,
         isSuccess,
+        isError,
         error,
         execute
     }
